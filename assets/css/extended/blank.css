@@ -4,8 +4,16 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
 
+/* for bigger pictures inside the posts */
 figure.big-picture {
-    width: 99vw;
+    width: 98vw;
     position: relative;
-    left: calc(-50vw + 50%);
+    left: calc(-49vw + 50%);
+}
+
+/* style for the cover image */
+figure.entry-cover {
+    width: 66vw;
+    position: relative;
+    left: calc(-33vw + 50%);
 }
