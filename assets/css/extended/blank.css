@@ -4,6 +4,11 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
 
+/* smooth color transition */
+body {
+    transition: color 200ms ease-out, background-color 200ms ease-out;
+}
+
 /* for bigger pictures inside the posts */
 figure.big-picture {
     width: 98vw;
@@ -16,4 +21,52 @@ figure.entry-cover {
     width: 66vw;
     position: relative;
     left: calc(-33vw + 50%);
+}
+
+/* arrow styled breadcrumbs */
+.breadcrumbs {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.breadcrumbs a {
+    display: inline-block;
+    position: relative;
+    margin-right: 2em;
+    padding-right: 0.2em;
+    background-color: var(--primary);
+    color: var(--theme);
+    white-space: nowrap;
+}
+
+.breadcrumbs a:hover {
+    background-color: var(--secondary);
+}
+
+.breadcrumbs a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-width: 0.79em 0.7em;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--primary);
+}
+
+.breadcrumbs a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1em;
+    border-width: 0.79em 0.5em;
+    border-style: solid;
+    border-color: var(--primary) var(--primary) var(--primary) transparent;
+}
+
+.breadcrumbs a:hover:after {
+    border-color: transparent transparent transparent var(--secondary);
+}
+
+.breadcrumbs a:hover:before {
+    border-color: var(--secondary) var(--secondary) var(--secondary) transparent;
 }
