@@ -70,3 +70,8 @@ figure.entry-cover {
 .breadcrumbs a:hover:before {
     border-color: var(--secondary) var(--secondary) var(--secondary) transparent;
 }
+
+/* preferred fonts for code snippets */
+code {
+    font-family: Monaco, 'Cascadia Code', Menlo, 'Courier New', Courier, monospace;
+}
