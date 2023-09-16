@@ -1,5 +1,5 @@
 /*
-This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+This is just a placeholder blank stylesheet so as to support adding custom styles bundled with theme's default styles
 
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
@@ -37,6 +37,7 @@ figure.entry-cover {
     background-color: var(--primary);
     color: var(--theme);
     white-space: nowrap;
+    height: calc(var(--gap));
 }
 
 .breadcrumbs a:hover {
@@ -48,7 +49,7 @@ figure.entry-cover {
     position: absolute;
     top: 0;
     left: 100%;
-    border-width: 0.80em 0.7em;
+    border-width: calc(var(--gap)/2) var(--radius);
     border-style: solid;
     border-color: transparent transparent transparent var(--primary);
 }
@@ -57,8 +58,8 @@ figure.entry-cover {
     content: '';
     position: absolute;
     top: 0;
-    left: -1em;
-    border-width: 0.80em 0.5em;
+    left: calc(var(--radius)*-2);
+    border-width: calc(var(--gap)/2) var(--radius);
     border-style: solid;
     border-color: var(--primary) var(--primary) var(--primary) transparent;
 }
