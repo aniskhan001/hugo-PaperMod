@@ -6,7 +6,12 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 /* smooth color transition */
 body {
-    transition: color 200ms ease-out, background-color 200ms ease-out;
+    transition: color 150ms ease-out, background-color 150ms ease-out;
+}
+
+#menu .active {
+    padding-bottom: 2px;
+    border-bottom: 2px dashed currentColor;
 }
 
 /* for bigger pictures inside the posts */
@@ -38,6 +43,7 @@ figure.entry-cover {
     color: var(--theme);
     white-space: nowrap;
     font-weight: 500;
+    height: 26px;
 }
 
 .pagination a {
