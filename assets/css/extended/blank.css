@@ -32,44 +32,49 @@ figure.entry-cover {
 .breadcrumbs a {
     display: inline-block;
     position: relative;
-    margin-right: 2em;
-    padding-right: 0.2em;
-    background-color: var(--primary);
+    margin-right: calc(var(--content-gap) + var(--radius));
+    padding-right: var(--radius);
+    background-color: var(--secondary);
     color: var(--theme);
     white-space: nowrap;
-    height: calc(var(--gap));
+    font-weight: 500;
 }
 
-.breadcrumbs a:hover {
+.pagination a {
     background-color: var(--secondary);
 }
 
+.breadcrumbs a:hover,
+.pagination a:hover {
+    background-color: var(--primary);
+}
+
+.breadcrumbs a:before,
 .breadcrumbs a:after {
     content: '';
     position: absolute;
     top: 0;
-    left: 100%;
-    border-width: calc(var(--gap)/2) var(--radius);
+    border-width: 13px;
     border-style: solid;
-    border-color: transparent transparent transparent var(--primary);
+    z-index: -1;
 }
 
 .breadcrumbs a:before {
-    content: '';
-    position: absolute;
-    top: 0;
     left: calc(var(--radius)*-2);
-    border-width: calc(var(--gap)/2) var(--radius);
-    border-style: solid;
-    border-color: var(--primary) var(--primary) var(--primary) transparent;
+    border-color: var(--secondary) var(--secondary) var(--secondary) transparent;
 }
 
-.breadcrumbs a:hover:after {
+.breadcrumbs a:after {
+    left: 100%;
     border-color: transparent transparent transparent var(--secondary);
 }
 
+.breadcrumbs a:hover:after {
+    border-color: transparent transparent transparent var(--primary);
+}
+
 .breadcrumbs a:hover:before {
-    border-color: var(--secondary) var(--secondary) var(--secondary) transparent;
+    border-color: var(--primary) var(--primary) var(--primary) transparent;
 }
 
 /* preferred fonts for code snippets */
