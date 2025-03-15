@@ -44,10 +44,12 @@ figure.entry-cover {
     white-space: nowrap;
     font-weight: 500;
     height: 26px;
+    transition: background-color 150ms ease-out;
 }
 
 .pagination a {
     background-color: var(--secondary);
+    transition: background-color 150ms ease-out;
 }
 
 .breadcrumbs a:hover,
@@ -63,6 +65,7 @@ figure.entry-cover {
     border-width: 13px;
     border-style: solid;
     z-index: -1;
+    transition: border-color 150ms ease-out;
 }
 
 .breadcrumbs a:before {
@@ -86,4 +89,17 @@ figure.entry-cover {
 /* preferred fonts for code snippets */
 code {
     font-family: Monaco, 'Cascadia Code', Menlo, 'Courier New', Courier, monospace;
+}
+
+.post-content a {
+    transition: box-shadow 150ms ease-out, text-shadow 150ms ease-out;
+}
+
+.post-content a:hover {
+    box-shadow: 0 4px;
+    text-shadow: 0 0 5px var(--secondary);
+}
+
+.post-content a:active {
+    text-shadow: 0 0 10px #ff5f03;
 }
